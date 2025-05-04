@@ -1,13 +1,13 @@
-document.getElementById('accessibility-button').addEventListener('click', function() {
-    let menu = document.getElementById('accessibility-menu');
-    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-  });
-  
-  document.getElementById('toggle-contrast').addEventListener('click', function() {
+// JavaScript להוספת נגישות
+
+// כפתור ניגודיות גבוהה
+const toggleContrast = document.getElementById('toggle-contrast');
+toggleContrast.addEventListener('click', () => {
     document.body.classList.toggle('high-contrast');
-  });
-  
-  document.getElementById('toggle-font-size').addEventListener('click', function() {
+});
+
+// כפתור גודל טקסט
+const toggleFontSize = document.getElementById('toggle-font-size');
+toggleFontSize.addEventListener('click', () => {
     document.body.classList.toggle('large-font');
-  });
-  
+});

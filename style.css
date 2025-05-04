@@ -1,88 +1,45 @@
-/* הגדרות כלליות */
+/* עיצוב בסיסי */
 body {
   direction: rtl;
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
-  background-color: #1d1d1d;
-  color: #f5f5f5;
+  background: #f9f9f9;
+  color: #333;
 }
 
-/* כפתור נגישות */
-.accessibility-btn {
-  position: fixed;
-  bottom: 10px;
-  left: 10px;
-  z-index: 1000;
-}
-
-.accessibility-icon {
-  background-color: #0078d4;
-  color: white;
-  font-size: 2rem;
-  padding: 10px;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-}
-
-.accessibility-menu {
-  display: none;
-  background-color: #333;
-  padding: 10px;
-  border-radius: 8px;
-}
-
-.accessibility-menu button {
-  background-color: #555;
-  color: white;
-  border: none;
-  padding: 8px;
-  margin: 5px 0;
-  width: 100%;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.accessibility-menu button:hover {
-  background-color: #0078d4;
-}
-
-/* כותרת וחתימה */
 header {
-  background-color: #333;
-  color: #f5f5f5;
+  background: #009688;
+  color: white;
   text-align: center;
-  padding: 3rem 1rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  padding: 2rem 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-  font-size: 3rem;
   margin: 0;
+  font-size: 2.5rem;
 }
 
 header p {
-  font-size: 1.3rem;
   margin-top: 0.5rem;
+  font-size: 1.2rem;
 }
 
-/* שירותים ויצירת קשר */
 main {
-  padding: 3rem 1rem;
+  padding: 2rem;
 }
 
-.services, .contact {
-  background-color: #2a2a2a;
-  padding: 2rem;
+.services, .contact, .about {
+  background: white;
   margin-bottom: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
 h2 {
-  font-size: 2rem;
-  color: #0078d4;
   margin-top: 0;
+  color: #00695c;
 }
 
 ul {
@@ -91,23 +48,18 @@ ul {
 }
 
 ul li {
-  background-color: #444;
-  padding: 12px;
+  background: #e0f2f1;
+  margin: 0.5rem 0;
+  padding: 0.75rem;
   border-radius: 8px;
-  margin-bottom: 10px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
-/* Footer */
 footer {
   text-align: center;
-  background-color: #333;
-  color: white;
   padding: 1rem;
-}
-
-footer p {
-  font-size: 1rem;
+  background: #004d40;
+  color: white;
 }
 
 /* ניגודיות גבוהה */
@@ -116,19 +68,30 @@ footer p {
   color: #fff;
 }
 
-.high-contrast header, .high-contrast footer {
-  background-color: #333;
-}
-
-/* גודל טקסט גדול יותר */
+/* גודל טקסט גדול */
 .large-font {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
-.large-font header h1 {
-  font-size: 3.5rem;
+/* כפתור נגישות */
+.accessibility-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
 }
 
-.large-font .services, .large-font .contact {
-  font-size: 1.4rem;
+button {
+  background-color: #009688;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+button:hover {
+  background-color: #00796b;
 }
