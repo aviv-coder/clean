@@ -1,97 +1,83 @@
-/* עיצוב בסיסי */
-body {
-  direction: rtl;
-  font-family: Arial, sans-serif;
+/* בסיסי */
+* {
   margin: 0;
-  background: #f9f9f9;
-  color: #333;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  direction: rtl;
+  background-color: #fafafa;
 }
 
 header {
-  background: #009688;
-  color: white;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
   text-align: center;
-  padding: 2rem 1rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
+nav ul {
+  list-style: none;
 }
 
-header p {
-  margin-top: 0.5rem;
-  font-size: 1.2rem;
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+button.accessibility-btn {
+  background-color: #f1c40f;
+  color: #333;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
 }
 
 main {
-  padding: 2rem;
-}
-
-.services, .contact, .about {
-  background: white;
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
-h2 {
-  margin-top: 0;
-  color: #00695c;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-ul li {
-  background: #e0f2f1;
-  margin: 0.5rem 0;
-  padding: 0.75rem;
-  border-radius: 8px;
-  font-size: 1.1rem;
+  padding: 20px;
+  background-color: #fff;
 }
 
 footer {
-  text-align: center;
-  padding: 1rem;
-  background: #004d40;
-  color: white;
-}
-
-/* ניגודיות גבוהה */
-.high-contrast {
-  background-color: #000;
+  background-color: #333;
   color: #fff;
-}
-
-/* גודל טקסט גדול */
-.large-font {
-  font-size: 1.5rem;
-}
-
-/* כפתור נגישות */
-.accessibility-button {
+  text-align: center;
+  padding: 10px;
   position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 999;
+  bottom: 0;
+  width: 100%;
 }
 
-button {
-  background-color: #009688;
-  color: white;
+/* טפסים */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label, input, textarea {
+  font-size: 16px;
+  padding: 8px;
+}
+
+button[type="submit"] {
+  background-color: #333;
+  color: #fff;
   border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 5px;
+  padding: 10px;
   cursor: pointer;
-  margin: 5px 0;
 }
 
-button:hover {
-  background-color: #00796b;
+/* נגישות */
+body.accessible {
+  font-size: 18px;
 }

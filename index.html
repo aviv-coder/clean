@@ -1,49 +1,33 @@
 <!DOCTYPE html>
 <html lang="he">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>מנקה הבניינים</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הדף הראשי</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- כפתור נגישות -->
-  <div class="accessibility-button">
-    <button id="toggle-contrast">ניגודיות גבוהה</button>
-    <button id="toggle-font-size">גודל טקסט</button>
-  </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">דף הבית</a></li>
+                <li><a href="about.html">אודות</a></li>
+                <li><a href="history.html">קצת עלינו</a></li>
+                <li><a href="contact.html">צור קשר</a></li>
+            </ul>
+        </nav>
+        <button id="accessibility-btn" class="accessibility-btn">הנגשה</button>
+    </header>
+    
+    <main>
+        <h1>ברוכים הבאים לאתר שלנו</h1>
+        <p>האתר שלנו מציע מגוון שירותים בתחום אחזקת מבנים וניקיון. אנו מספקים שירותים מקצועיים, איכותיים ומותאמים אישית לכל לקוח.</p>
+    </main>
 
-  <header>
-    <h1>מנקה הבניינים</h1>
-    <p>שירותי ניקיון וגינון לבניינים פרטיים וציבוריים</p>
-  </header>
+    <footer>
+        <p>&copy; 2025 כל הזכויות שמורות</p>
+    </footer>
 
-  <main>
-    <section class="services">
-      <h2>השירותים שלנו</h2>
-      <ul>
-        <li>🧼 ניקיון חדרי מדרגות, לובי ומעליות</li>
-        <li>🪴 גינון ותחזוקה שוטפת של שטחים ירוקים</li>
-        <li>🧹 ניקיון תקופתי וחגים</li>
-        <li>💧 שטיפת רצפות ומעקות</li>
-      </ul>
-    </section>
-
-    <section class="contact">
-      <h2>צור קשר</h2>
-      <p>לקבלת הצעת מחיר משתלמת התקשרו עכשיו: <strong>050-0000000</strong></p>
-    </section>
-
-    <section class="about">
-      <h2>קצת עלינו</h2>
-      <p>חברת "מנקה הבניינים" נוסדה בשנת 2020 מתוך צורך בתחום הניקיון והתחזוקה. מאז ועד היום, אנו מספקים שירותים מקצועיים וממוקדים ללקוחות פרטיים וציבוריים ברחבי הארץ.</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 מנקה הבניינים. כל הזכויות שמורות.</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
