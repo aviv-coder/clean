@@ -7,6 +7,17 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- כפתור נגישות -->
+  <div class="accessibility-btn">
+    <button class="accessibility-icon" id="accessibility-button" aria-label="נגישות">
+      ♿
+    </button>
+    <div id="accessibility-menu" class="accessibility-menu">
+      <button id="toggle-contrast">ניגודיות גבוהה</button>
+      <button id="toggle-font-size">גודל טקסט</button>
+    </div>
+  </div>
+
   <header>
     <h1>מנקה הבניינים</h1>
     <p>שירותי ניקיון וגינון לבניינים פרטיים וציבוריים</p>
@@ -31,24 +42,8 @@
 
   <footer>
     <p>© 2025 מנקה הבניינים. כל הזכויות שמורות.</p>
-    
-    <!-- כפתורי נגישות -->
-    <div class="accessibility-button">
-      <button id="toggle-contrast">ניגודיות גבוהה</button>
-      <button id="toggle-font-size">גודל טקסט</button>
-    </div>
   </footer>
 
-  <!-- JavaScript -->
-  <script>
-    // הוספת הפונקציות לכפתורי הנגישות
-    document.getElementById('toggle-contrast').addEventListener('click', function() {
-      document.body.classList.toggle('high-contrast');
-    });
-
-    document.getElementById('toggle-font-size').addEventListener('click', function() {
-      document.body.classList.toggle('larger-font');
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
