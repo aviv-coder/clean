@@ -31,6 +31,24 @@
 
   <footer>
     <p>© 2025 מנקה הבניינים. כל הזכויות שמורות.</p>
+    
+    <!-- כפתורי נגישות -->
+    <div class="accessibility-button">
+      <button id="toggle-contrast">ניגודיות גבוהה</button>
+      <button id="toggle-font-size">גודל טקסט</button>
+    </div>
   </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // הוספת הפונקציות לכפתורי הנגישות
+    document.getElementById('toggle-contrast').addEventListener('click', function() {
+      document.body.classList.toggle('high-contrast');
+    });
+
+    document.getElementById('toggle-font-size').addEventListener('click', function() {
+      document.body.classList.toggle('larger-font');
+    });
+  </script>
 </body>
-</html>     
+</html>

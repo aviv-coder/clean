@@ -2,16 +2,16 @@ body {
   direction: rtl;
   font-family: Arial, sans-serif;
   margin: 0;
-  background: #f9f9f9;
+  background: #f4f4f9; /* צבע רקע בהיר יותר */
   color: #333;
 }
 
 header {
-  background: #009688;
+  background: #333; /* שינוי לצבע כהה יותר */
   color: white;
   text-align: center;
   padding: 2rem 1rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* צלליות חזקות יותר */
 }
 
 header h1 {
@@ -33,12 +33,12 @@ main {
   margin-bottom: 2rem;
   padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* צלליות עדינות יותר */
 }
 
 h2 {
   margin-top: 0;
-  color: #00695c;
+  color: #004d40; /* צבע ירוק כהה */
 }
 
 ul {
@@ -47,7 +47,7 @@ ul {
 }
 
 ul li {
-  background: #e0f2f1;
+  background: #e0f2f1; /* צבע פסטל בהיר */
   margin: 0.5rem 0;
   padding: 0.75rem;
   border-radius: 8px;
@@ -57,6 +57,21 @@ ul li {
 footer {
   text-align: center;
   padding: 1rem;
-  background: #004d40;
+  background: #333; /* כהה כמו header */
   color: white;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1); /* צלליות בחלק התחתון */
 }
+
+/* כפתורי נגישות */
+.accessibility-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.accessibility-button button {
+  margin: 10px;
+  padding: 12px 20px;
+  background-color: #444; /* צבע כהה יותר */
+  color: white;
