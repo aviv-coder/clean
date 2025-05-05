@@ -1,38 +1,40 @@
 <!DOCTYPE html>
-<html lang="he">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maintino</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <script src="accessibility.js" defer></script>
 </head>
 <body>
-    <div class="hero-image">
+    <header>
+        <nav>
+            <div class="menu">
+                <a href="index.html">בית</a>
+                <a href="about.html">אודות</a>
+                <a href="history.html">היסטוריה</a>
+                <a href="contact.html">צור קשר</a>
+            </div>
+        </nav>
+        <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+    </header>
+
+    <section class="hero-image">
         <div class="hero-text">
-            <h1>ברוכים הבאים!</h1>
-            <p>השירותים שלנו</p>
+            <h1>Maintino</h1>
+            <p>שירותי ניקיון ואחזקת מבנים יוקרתיים</p>
         </div>
-    </div>
+    </section>
 
-    <!-- תפריט המבורגר -->
-    <div class="menu-bar">
-        <span class="hamburger" onclick="toggleMenu()">&#9776;</span>
-    </div>
-
-    <!-- תפריט צד -->
-    <div class="side-menu" id="sideMenu">
-        <ul>
-            <li><a href="index.html">דף הבית</a></li>
-            <li><a href="about.html">אודות</a></li>
-            <li><a href="history.html">קצת עלינו</a></li>
-            <li><a href="contact.html">צור קשר</a></li>
-        </ul>
-    </div>
-
-    <!-- כפתור נגישות -->
-    <div class="accessibility-btn">
-        <button onclick="toggleAccessibility()">נגישות</button>
+    <div id="accessibility-menu">
+        <button onclick="increaseFontSize()">הגדלת טקסט</button>
+        <button onclick="decreaseFontSize()">הקטנת טקסט</button>
+        <button onclick="toggleContrast()">ניגודיות גבוהה</button>
+        <button onclick="invertColors()">היפוך צבעים</button>
+        <button onclick="grayscale()">גווני אפור</button>
+        <button onclick="highlightLinks()">הדגשת קישורים</button>
+        <button onclick="resetSettings()">איפוס</button>
     </div>
 </body>
 </html>

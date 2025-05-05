@@ -1,42 +1,36 @@
 <!DOCTYPE html>
-<html lang="he">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>צור קשר</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Maintino - צור קשר</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="accessibility.js" defer></script>
 </head>
 <body>
-    <div class="menu-bar">
-        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-    </div>
-    <div id="side-menu" class="side-menu">
-        <ul>
-            <li><a href="index.html">דף הבית</a></li>
-            <li><a href="about.html">אודות</a></li>
-            <li><a href="history.html">קצת עלינו</a></li>
-            <li><a href="contact.html">צור קשר</a></li>
-        </ul>
-    </div>
+    <header>
+        <nav>
+            <div class="menu">
+                <a href="index.html">בית</a>
+                <a href="about.html">אודות</a>
+                <a href="history.html">היסטוריה</a>
+                <a href="contact.html">צור קשר</a>
+            </div>
+        </nav>
+        <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+    </header>
 
-    <div class="contact-section">
-        <h2>צור קשר</h2>
-        <form>
-            <label for="name">שם מלא:</label><br>
-            <input type="text" id="name" name="name"><br><br>
-            <label for="email">אימייל:</label><br>
-            <input type="email" id="email" name="email"><br><br>
-            <label for="message">הודעה:</label><br>
-            <textarea id="message" name="message"></textarea><br><br>
-            <input type="submit" value="שלח">
+    <section class="contact-section">
+        <h1>צור קשר עם Maintino</h1>
+        <form action="#">
+            <label for="name">שם מלא:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">אימייל:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">הודעה:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">שלח</button>
         </form>
-    </div>
-
-    <!-- כפתור נגישות -->
-    <div class="accessibility-btn">
-        <button onclick="toggleAccessibility()">נגישות</button>
-    </div>
-
-    <script src="script.js"></script>
+    </section>
 </body>
 </html>

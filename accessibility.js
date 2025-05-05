@@ -1,25 +1,45 @@
-function toggleMenu() {
-    document.getElementById('sideMenu').classList.toggle('open');
+let isHighContrast = false;
+let isInverted = false;
+let isGrayscale = false;
+
+function increaseFontSize() {
+    document.body.style.fontSize = '1.2em';
 }
 
-function toggleAccessibility() {
-    document.body.classList.toggle('high-contrast');
-    document.body.classList.toggle('inverted');
-    document.body.classList.toggle('grayscale');
+function decreaseFontSize() {
+    document.body.style.fontSize = '0.8em';
 }
 
-// אפשרויות נגישות נוספות
-document.body.addEventListener('keypress', function(e) {
-    if (e.key === '1') { // ניגודיות גבוהה
-        toggleAccessibility();
-    }
-    if (e.key === '2') { // היפוך צבעים
-        document.body.classList.toggle('inverted');
-    }
-    if (e.key === '3') { // גווני אפור
-        document.body.classList.toggle('grayscale');
-    }
-    if (e.key === '4') { // הדגשת קישורים
-        document.querySelectorAll('a').forEach(link => link.classList.toggle('highlighted'));
-    }
-});
+function toggleContrast() {
+    isHighContrast = !isHighContrast;
+    document.body.style.backgroundColor = isHighContrast ? 'black' : 'white';
+    document.body.style.color = isHighContrast ? 'white' : 'black';
+}
+
+function invertColors() {
+    isInverted = !isInverted;
+    document.body.style.filter = isInverted ? 'invert(1)' : 'invert(0)';
+}
+
+function grayscale() {
+    isGrayscale = !isGrayscale;
+    document.body.style.filter = isGrayscale ? 'grayscale(1)' : 'grayscale(0)';
+}
+
+function highlightLinks() {
+    let links = document.querySelectorAll('a');
+    links.forEach(link => {
+        link.style.backgroundColor = 'yellow';
+    });
+}
+
+function resetSettings() {
+    document.body.style.fontSize = '1em';
+    document.body.style.backgroundColor = 'white';
+    document.body.style.color = 'black';
+    document.body.style.filter = 'none';
+    let links = document.querySelectorAll('a');
+    links.forEach(link => {
+        link.style.backgroundColor = 'transparent';
+    });
+}
