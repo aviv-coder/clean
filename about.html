@@ -4,29 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>אודות</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">דף הבית</a></li>
-                <li><a href="about.html">אודות</a></li>
-                <li><a href="history.html">קצת עלינו</a></li>
-                <li><a href="contact.html">צור קשר</a></li>
-            </ul>
-        </nav>
-        <button id="accessibility-btn" class="accessibility-btn">הנגשה</button>
-    </header>
+    <div class="menu-bar">
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </div>
+    <div id="side-menu" class="side-menu">
+        <ul>
+            <li><a href="index.html">דף הבית</a></li>
+            <li><a href="about.html">אודות</a></li>
+            <li><a href="history.html">קצת עלינו</a></li>
+            <li><a href="contact.html">צור קשר</a></li>
+        </ul>
+    </div>
 
-    <main>
-        <h1>אודותינו</h1>
-        <p>אנו חברה המתמחה בשירותי ניקיון ואחזקת מבנים, עם ניסיון של שנים רבות בתחום. כל השירותים שלנו מותאמים אישית ללקוחות, ומבוצעים על ידי צוות מיומן ומקצועי.</p>
-    </main>
+    <div class="about-section">
+        <h2>על Maintino</h2>
+        <p>Maintino היא חברה המתמחה בשירותי ניקיון ואחזקת מבנים. עם ניסיון של שנים בתחום, אנחנו מספקים פתרונות מקצועיים לכל צורך, ממשרדים ועד בניינים רבי קומות. המטרה שלנו היא לא רק להעניק שירות, אלא להפוך כל מקום לסביבה נקייה, בריאה ויעילה.</p>
 
-    <footer>
-        <p>&copy; 2025 כל הזכויות שמורות</p>
-    </footer>
+        <h3>הצוות שלנו</h3>
+        <p>הצוות של Maintino מורכב מאנשים בעלי ניסיון רחב, שהם לא רק מומחים בתחום, אלא גם אוהבים את מה שהם עושים. אנחנו מבינים שהמפתח להצלחה הוא הקשר האנושי, ולכן כל אחד בצוות שלנו שם דגש על מקצועיות, אמינות ושירות לקוחות מעולה.</p>
+
+        <h3>החזון שלנו</h3>
+        <p>חזוננו הוא להיות החברה המובילה בתחום אחזקת המבנים, ולספק פתרונות בהתאמה אישית לכל לקוח. אנחנו מאמינים שבניית קשרים ארוכי טווח עם לקוחותינו היא המפתח להצלחה.</p>
+    </div>
+
+    <!-- כפתור נגישות -->
+    <div class="accessibility-btn">
+        <button onclick="toggleAccessibility()">נגישות</button>
+    </div>
 
     <script src="script.js"></script>
 </body>

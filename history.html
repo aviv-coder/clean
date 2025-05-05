@@ -4,29 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>קצת עלינו</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">דף הבית</a></li>
-                <li><a href="about.html">אודות</a></li>
-                <li><a href="history.html">קצת עלינו</a></li>
-                <li><a href="contact.html">צור קשר</a></li>
-            </ul>
-        </nav>
-        <button id="accessibility-btn" class="accessibility-btn">הנגשה</button>
-    </header>
+    <div class="menu-bar">
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </div>
+    <div id="side-menu" class="side-menu">
+        <ul>
+            <li><a href="index.html">דף הבית</a></li>
+            <li><a href="about.html">אודות</a></li>
+            <li><a href="history.html">קצת עלינו</a></li>
+            <li><a href="contact.html">צור קשר</a></li>
+        </ul>
+    </div>
 
-    <main>
-        <h1>ההיסטוריה שלנו</h1>
-        <p>החברה נוסדה בשנת 2010 מתוך רצון להציע שירותי ניקיון ואחזקת מבנים ברמה גבוהה ובסטנדרטים מקצועיים. מאז ועד היום, הצלחנו לגדול ולהרחיב את קהל הלקוחות שלנו, תוך שמירה על איכות השירות.</p>
-    </main>
+    <div class="history-section">
+        <h2>היסטוריה של Maintino</h2>
+        <p>התחלנו את הדרך שלנו מתוך רצון להעניק שירותי ניקיון ואחזקת מבנים ברמה הגבוהה ביותר. עם השנים, הפכנו למובילים בתחום והקמנו צוות מיומן המפיץ את הערכים שלנו בכל פרויקט.</p>
+    </div>
 
-    <footer>
-        <p>&copy; 2025 כל הזכויות שמורות</p>
-    </footer>
+    <!-- כפתור נגישות -->
+    <div class="accessibility-btn">
+        <button onclick="toggleAccessibility()">נגישות</button>
+    </div>
 
     <script src="script.js"></script>
 </body>

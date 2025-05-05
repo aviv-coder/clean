@@ -1,83 +1,129 @@
-/* בסיסי */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* עיצוב כללי */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  direction: rtl;
-  background-color: #fafafa;
-}
-
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
-}
-
-nav ul li {
-  display: inline-block;
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-button.accessibility-btn {
-  background-color: #f1c40f;
-  color: #333;
-  padding: 10px 15px;
-  border: none;
-  cursor: pointer;
-}
-
-main {
-  padding: 20px;
-  background-color: #fff;
-}
-
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-/* טפסים */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-label, input, textarea {
   font-size: 16px;
-  padding: 8px;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
 }
 
-button[type="submit"] {
+h2, h3 {
+  color: #333;
+}
+
+/* עיצוב תמונת Hero */
+.hero-image {
+  background-image: url('https://files09.oaiusercontent.com/file-7tBNrWmzsNZzXJvqH7YQvw?se=2025-05-05T13%3A27%3A25Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D299%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D547cebe9-c93d-4295-a9e7-e04b22437f07.png&sig=kZZatwmKRibinluBW545%2BQpoA6hCMPvRggmlwezg5ck%3D');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+}
+
+/* עיצוב תפריט צד */
+.side-menu {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  width: 250px;
+  height: 100%;
   background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
+  overflow: auto;
+  transition: 0.3s;
+  z-index: 999;
 }
 
-/* נגישות */
-body.accessible {
+.side-menu ul {
+  padding: 20px;
+  list-style-type: none;
+  margin: 0;
+}
+
+.side-menu ul li {
+  padding: 8px;
+  text-align: right;
+}
+
+.side-menu ul li a {
+  text-decoration: none;
+  color: white;
   font-size: 18px;
+}
+
+.side-menu ul li a:hover {
+  color: #f1f1f1;
+}
+
+/* כפתור המבורגר */
+.menu-bar {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.hamburger {
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* עיצוב כפתור נגישות */
+.accessibility-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.accessibility-btn button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* תפריט פתוח */
+.side-menu.open {
+  left: 0;
+}
+
+/* ניגודיות גבוהה */
+body.high-contrast {
+  background-color: black;
+  color: white;
+}
+
+/* היפוך צבעים */
+body.inverted {
+  filter: invert(1);
+}
+
+/* גווני אפור */
+body.grayscale {
+  filter: grayscale(100%);
+}
+
+/* הדגשת קישורים */
+a.highlighted {
+  background-color: yellow;
+  color: black;
+}
+
+/* אם רוצים לא להציג תפריט צדדי במסכים קטנים */
+@media screen and (max-width: 768px) {
+  .side-menu {
+      left: -100%;
+  }
 }
