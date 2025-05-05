@@ -1,45 +1,38 @@
-let isHighContrast = false;
-let isInverted = false;
-let isGrayscale = false;
-
-function increaseFontSize() {
-    document.body.style.fontSize = '1.2em';
-}
-
-function decreaseFontSize() {
-    document.body.style.fontSize = '0.8em';
-}
-
-function toggleContrast() {
-    isHighContrast = !isHighContrast;
-    document.body.style.backgroundColor = isHighContrast ? 'black' : 'white';
-    document.body.style.color = isHighContrast ? 'white' : 'black';
-}
-
-function invertColors() {
-    isInverted = !isInverted;
-    document.body.style.filter = isInverted ? 'invert(1)' : 'invert(0)';
-}
-
-function grayscale() {
-    isGrayscale = !isGrayscale;
-    document.body.style.filter = isGrayscale ? 'grayscale(1)' : 'grayscale(0)';
-}
-
-function highlightLinks() {
-    let links = document.querySelectorAll('a');
-    links.forEach(link => {
-        link.style.backgroundColor = 'yellow';
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.getElementById("accessibility-toggle");
+    const menu = document.getElementById("accessibility-menu");
+  
+    toggleButton.addEventListener("click", () => {
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
     });
-}
-
-function resetSettings() {
-    document.body.style.fontSize = '1em';
-    document.body.style.backgroundColor = 'white';
-    document.body.style.color = 'black';
-    document.body.style.filter = 'none';
-    let links = document.querySelectorAll('a');
-    links.forEach(link => {
-        link.style.backgroundColor = 'transparent';
+  
+    document.getElementById("increase-text").addEventListener("click", () => {
+      document.body.style.fontSize = "larger";
     });
-}
+  
+    document.getElementById("decrease-text").addEventListener("click", () => {
+      document.body.style.fontSize = "smaller";
+    });
+  
+    document.getElementById("high-contrast").addEventListener("click", () => {
+      document.body.classList.toggle("high-contrast");
+    });
+  
+    document.getElementById("invert-colors").addEventListener("click", () => {
+      document.body.classList.toggle("invert-colors");
+    });
+  
+    document.getElementById("grayscale").addEventListener("click", () => {
+      document.body.classList.toggle("grayscale");
+    });
+  
+    document.getElementById("highlight-links").addEventListener("click", () => {
+      document.body.classList.toggle("highlight-links");
+    });
+  
+    document.getElementById("reset-accessibility").addEventListener("click", () => {
+      document.body.style.fontSize = "";
+      document.body.classList.remove("high-contrast", "invert-colors", "grayscale", "highlight-links");
+    });
+  });
+  

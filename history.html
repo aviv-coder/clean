@@ -1,28 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maintino - היסטוריה</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="accessibility.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>קצת עלינו</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="menu">
-                <a href="index.html">בית</a>
-                <a href="about.html">אודות</a>
-                <a href="history.html">היסטוריה</a>
-                <a href="contact.html">צור קשר</a>
-            </div>
-        </nav>
-        <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
-    </header>
 
-    <section class="history-section">
-        <h1>היסטוריה של Maintino</h1>
-        <p>Maintino נוסדה בשנת 2025 מתוך רצון לספק שירותי ניקיון ואחזקת מבנים ברמה גבוהה, עם דגש על פתרונות מותאמים אישית ולקוחות יוקרתיים.</p>
-    </section>
+  <header>
+    <div class="navbar">
+      <div class="logo">ניקיון ותחזוקת מבנים</div>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">דף הבית</a></li>
+        <li><a href="about.html">אודות</a></li>
+        <li><a href="history.html">קצת עלינו</a></li>
+        <li><a href="contact.html">צור קשר</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="content">
+    <h1>קצת עלינו</h1>
+    <p>החברה נוסדה בשנת 2023, מתוך מטרה לספק שירותי ניקיון ותחזוקה איכותיים לבתים, דירות ומבנים מסחריים. עם צוות מקצועי ומנוסה, אנו מתחייבים לשירות שמוביל לאיכות, נוחות ושביעות רצון מלאה.</p>
+  </div>
+
+  <!-- כפתור נגישות -->
+  <button id="accessibility-toggle">נגישות</button>
+  <div id="accessibility-menu" class="accessibility-menu">
+    <button id="increase-text">הגדלת טקסט</button>
+    <button id="decrease-text">הקטנת טקסט</button>
+    <button id="high-contrast">ניגודיות גבוהה</button>
+    <button id="invert-colors">היפוך צבעים</button>
+    <button id="grayscale">גווני אפור</button>
+    <button id="highlight-links">הדגשת קישורים</button>
+    <button id="reset-accessibility">איפוס</button>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="accessibility.js"></script>
+
 </body>
 </html>
