@@ -1,45 +1,61 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="he">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>קצת עלינו</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-
-  <header>
-    <div class="navbar">
-      <div class="logo">ניקיון ותחזוקת מבנים</div>
-      <button class="hamburger" onclick="toggleMenu()">☰</button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">דף הבית</a></li>
-        <li><a href="about.html">אודות</a></li>
-        <li><a href="history.html">קצת עלינו</a></li>
-        <li><a href="contact.html">צור קשר</a></li>
-      </ul>
-    </div>
+  <header class="navbar">
+    <div class="logo">דף דמו</div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <nav class="nav-menu">
+      <a href="index.html">בית</a>
+      <a href="about.html">אודות</a>
+      <a href="history.html">קצת עלינו</a>
+      <a href="contact.html">צור קשר</a>
+    </nav>
   </header>
 
-  <div class="content">
+  <div id="menu-container"></div>
+
+
+  <main class="page-content">
     <h1>קצת עלינו</h1>
-    <p>החברה נוסדה בשנת 2023, מתוך מטרה לספק שירותי ניקיון ותחזוקה איכותיים לבתים, דירות ומבנים מסחריים. עם צוות מקצועי ומנוסה, אנו מתחייבים לשירות שמוביל לאיכות, נוחות ושביעות רצון מלאה.</p>
+    <p>
+      החברה שלנו הוקמה מתוך חזון לשנות את תחום ניקיון ואחזקת המבנים בישראל. כבר מהיום הראשון הצבנו לעצמנו מטרה ברורה: לתת שירות שאין שני לו, עם מקצועיות, אמינות ותשומת לב לפרטים הקטנים.
+    </p>
+    <p>
+      עם השנים צברנו ניסיון ולקוחות מרוצים, והרחבנו את תחומי השירות שלנו בהתאמה לצורכי השוק. אנו גאים להוביל את התחום ולייצר סטנדרט חדש בניקיון ותחזוקה.
+    </p>
+  </main>
+
+  <button id="accessibility-btn" onclick="toggleAccessibility()">נגישות</button>
+
+  <div id="accessibility-menu">
+    <button onclick="increaseText()">הגדלת טקסט</button>
+    <button onclick="decreaseText()">הקטנת טקסט</button>
+    <button onclick="toggleHighContrast()">ניגודיות גבוהה</button>
+    <button onclick="toggleInvertColors()">היפוך צבעים</button>
+    <button onclick="toggleGrayScale()">גווני אפור</button>
+    <button onclick="highlightLinks()">הדגשת קישורים</button>
+    <button onclick="resetAccessibility()">איפוס</button>
   </div>
 
-  <!-- כפתור נגישות -->
-  <button id="accessibility-toggle">נגישות</button>
-  <div id="accessibility-menu" class="accessibility-menu">
-    <button id="increase-text">הגדלת טקסט</button>
-    <button id="decrease-text">הקטנת טקסט</button>
-    <button id="high-contrast">ניגודיות גבוהה</button>
-    <button id="invert-colors">היפוך צבעים</button>
-    <button id="grayscale">גווני אפור</button>
-    <button id="highlight-links">הדגשת קישורים</button>
-    <button id="reset-accessibility">איפוס</button>
-  </div>
-
-  <script src="script.js"></script>
-  <script src="accessibility.js"></script>
-
+  <script>
+    window.onload = function() {
+      // טוען את התפריט מתוך קובץ menu.html
+      fetch('menu.html')
+        .then(response => response.text())
+        .then(data => {
+          // מכניס את התפריט לתוך ה-DIV המיועד
+          document.getElementById('menu-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading menu:', error));
+    };
+  </script>
+  
 </body>
 </html>

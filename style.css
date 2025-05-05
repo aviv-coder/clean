@@ -1,158 +1,184 @@
-body {
-  font-family: Arial, sans-serif;
+/* הגדרת עיצוב כללי */
+* {
   margin: 0;
   padding: 0;
-  direction: rtl;
-  background-color: #fdfdfd;
-  color: #333;
+  box-sizing: border-box;
 }
 
-header {
-  background-color: #8B0000;
-  color: white;
-  padding: 1rem;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #7772de75;
+  color: #fafafb;
+  font-size: 16px;
 }
 
+h1, h2, h3 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* עיצוב לתפריט נווט */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #333;
+  padding: 15px;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-
-.nav-links li a {
+.navbar .logo {
   color: white;
-  text-decoration: none;
-  font-weight: bold;
+  font-size: 24px;
 }
 
-.hamburger {
-  display: none;
-  font-size: 1.5rem;
+.navbar .hamburger {
   background: none;
   border: none;
   color: white;
-}
-
-.content {
-  padding: 2rem;
-}
-
-form {
-  max-width: 500px;
-  margin-top: 1rem;
-}
-
-form label {
-  display: block;
-  margin-bottom: 0.5rem;
-  margin-top: 1rem;
-}
-
-form input,
-form textarea {
-  width: 100%;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 0.25rem;
-}
-
-form button {
-  background-color: #8B0000;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #a30000;
-}
-
-.accessibility-menu {
+  font-size: 30px;
   display: none;
-  position: fixed;
-  top: 80px;
-  right: 20px;
-  background: white;
-  border: 2px solid #8B0000;
-  padding: 1rem;
-  z-index: 1000;
-  border-radius: 10px;
 }
 
-.accessibility-menu button {
-  display: block;
-  margin: 0.5rem 0;
-  padding: 0.4rem;
-  width: 100%;
-  cursor: pointer;
+.nav-menu {
+  display: flex;
+  gap: 20px;
 }
 
-#accessibility-toggle {
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
+}
+
+/* הגדרת תפריט נגישות */
+#accessibility-menu {
+  display: none;
+  background-color: #fff;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #8B0000;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#accessibility-menu.active {
+  display: block;
+}
+
+button {
+  background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 50%;
-  width: 55px;
-  height: 55px;
-  font-size: 14px;
+  padding: 10px 15px;
   cursor: pointer;
-  z-index: 1001;
 }
 
+button:hover {
+  background-color: #0056b3;
+}
+
+/* עיצוב למצב נגישות */
+body.high-contrast {
+  background-color: #000;
+  color: #fff;
+}
+
+body.invert-colors {
+  filter: invert(1);
+}
+
+body.gray-scale {
+  filter: grayscale(1);
+}
+
+a.highlighted {
+  color: yellow;
+}
+
+/* עיצוב לדפים */
+.page-content {
+  padding: 30px;
+  background-color: white;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 10px;
+  font-size: 16px;
+}
+
+input[type="text"], input[type="email"] {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button[type="submit"] {
+  background-color: #28a745;
+}
+
+button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* עיצוב להמבורגר */
+.nav-menu.active {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar .hamburger {
+    display: block;
+  }
+}
+
+/* ניגודיות גבוהה */
 .high-contrast {
-  background-color: black !important;
-  color: yellow !important;
+  background-color: black;
+  color: white;
 }
 
+/* היפוך צבעים */
 .invert-colors {
-  filter: invert(100%);
+  filter: invert(1);
 }
 
-.grayscale {
+/* גווני אפור */
+.gray-scale {
   filter: grayscale(100%);
 }
 
-.highlight-links a {
-  background-color: yellow;
-  color: black !important;
-  font-weight: bold;
+/* הגדלת טקסט */
+body {
+  font-size: 16px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #8B0000;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    text-align: right;
-    padding: 1rem;
-  }
-
-  .nav-links li {
-    margin: 0.5rem 0;
-  }
-
-  .hamburger {
-    display: block;
-  }
+/* הדגשת קישורים */
+a.highlighted {
+  color: yellow;
+  font-weight: bold;
 }
