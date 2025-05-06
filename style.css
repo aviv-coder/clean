@@ -1,184 +1,109 @@
-/* הגדרת עיצוב כללי */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* כללי */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #7772de75;
-  color: #fafafb;
-  font-size: 16px;
-}
-
-h1, h2, h3 {
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-p {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f0ea;
+  color: #3b3b3b;
   line-height: 1.6;
 }
 
-/* עיצוב לתפריט נווט */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
-  padding: 15px;
+h1, h2, h3 {
+  color: #7a5c3e;
+  font-weight: 600;
 }
 
-.navbar .logo {
-  color: white;
-  font-size: 24px;
-}
-
-.navbar .hamburger {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 30px;
-  display: none;
-}
-
-.nav-menu {
-  display: flex;
-  gap: 20px;
-}
-
-.nav-menu a {
-  color: white;
+a {
+  color: #a67c52;
   text-decoration: none;
 }
 
-.nav-menu a:hover {
+a:hover {
   text-decoration: underline;
 }
 
-/* הגדרת תפריט נגישות */
-#accessibility-menu {
-  display: none;
-  background-color: #fff;
+/* כפתורים רגילים */
+button, .btn {
+  background-color: #a67c52;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  background-color: #8a6241;
+}
+
+/* כפתור נגישות */
+.accessibility-button {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#accessibility-menu.active {
-  display: block;
-}
-
-button {
-  background-color: #007bff;
+  top: 20px;
+  left: 20px;
+  background-color: #007BFF;
   color: white;
   border: none;
-  padding: 10px 15px;
+  padding: 12px 18px;
+  border-radius: 50px;
   cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-button:hover {
+.accessibility-button:hover {
   background-color: #0056b3;
 }
 
-/* עיצוב למצב נגישות */
-body.high-contrast {
-  background-color: #000;
-  color: #fff;
+/* אזורי תוכן */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
-body.invert-colors {
-  filter: invert(1);
-}
-
-body.gray-scale {
-  filter: grayscale(1);
-}
-
-a.highlighted {
-  color: yellow;
-}
-
-/* עיצוב לדפים */
-.page-content {
-  padding: 30px;
-  background-color: white;
-  margin: 20px auto;
-  max-width: 1200px;
-}
-
-form {
+/* כותרת ראשית */
+.hero {
+  background-image: url('image.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 450px;
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 4px #00000070;
+}
+
+/* טופס צור קשר */
+form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 input, textarea {
-  padding: 10px;
-  font-size: 16px;
-}
-
-input[type="text"], input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
 
-textarea {
-  resize: vertical;
-  min-height: 100px;
+input:focus, textarea:focus {
+  border-color: #a67c52;
+  outline: none;
 }
 
-button[type="submit"] {
-  background-color: #28a745;
-}
-
-button[type="submit"]:hover {
-  background-color: #218838;
-}
-
-/* עיצוב להמבורגר */
-.nav-menu.active {
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .navbar .hamburger {
-    display: block;
-  }
-}
-
-/* ניגודיות גבוהה */
-.high-contrast {
-  background-color: black;
+/* פוטר */
+footer {
+  background-color: #7a5c3e;
   color: white;
-}
-
-/* היפוך צבעים */
-.invert-colors {
-  filter: invert(1);
-}
-
-/* גווני אפור */
-.gray-scale {
-  filter: grayscale(100%);
-}
-
-/* הגדלת טקסט */
-body {
-  font-size: 16px;
-}
-
-/* הדגשת קישורים */
-a.highlighted {
-  color: yellow;
-  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
 }
